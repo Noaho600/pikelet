@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Host — Pikelet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <main class="panel" style="margin-top: 0">
+      <h1 class="page-title">Your game code</h1>
+      <p class="page-hint">Students open Pikelet, tap “Join with code,” and enter this room ID. (Demo only — no live sync yet.)</p>
+
+      <div class="code-display" id="gameCode" aria-live="polite">------</div>
+
+      <div class="row">
+        <button type="button" class="btn btn-primary" id="newCode">New code</button>
+        <button type="button" class="btn btn-ghost" id="copyCode">Copy</button>
+      </div>
+
+      <p class="status" id="copyStatus" hidden>Copied to clipboard.</p>
+
+      <p class="back"><a href="index.html">← Back home</a></p>
+    </main>
+    <footer class="foot">
+      <span>Pikelet demo</span>
+    </footer>
+
+    <script src="js/host.js"></script>
+  </body>
+</html>
