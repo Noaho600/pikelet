@@ -14,28 +14,53 @@
   </head>
   <body>
     <div class="bg-grid" aria-hidden="true"></div>
-    <main class="panel" style="margin-top: 0">
-      <h1 class="page-title">Join a game</h1>
-      <p class="page-hint">Type the 6-character code your teacher shared.</p>
+    <p id="connStatus" class="conn-line" role="status">Enter your details to connect.</p>
 
-      <form id="joinForm">
-        <div class="field">
-          <label for="code">Game code</label>
-          <input id="code" name="code" maxlength="6" autocomplete="off" placeholder="ABC123" inputmode="text" />
-        </div>
-        <div class="row" style="margin-top: 1rem">
-          <button type="submit" class="btn btn-primary">Enter lobby</button>
-        </div>
-      </form>
+    <main class="panel panel-wide">
+      <section id="joinPanel">
+        <h1 class="page-title">Join a game</h1>
+        <p class="page-hint">Use the 6-character code from your host. Open this page on each device.</p>
 
-      <p class="status" id="joinStatus" hidden></p>
+        <form id="joinForm">
+          <div class="field">
+            <label for="name">Display name</label>
+            <input id="name" name="name" maxlength="24" autocomplete="nickname" placeholder="Alex" />
+          </div>
+          <div class="field" style="margin-top: 1rem">
+            <label for="code">Game code</label>
+            <input id="code" name="code" maxlength="6" autocomplete="off" placeholder="ABC123" inputmode="text" />
+          </div>
+          <div class="row" style="margin-top: 1rem">
+            <button type="submit" class="btn btn-primary">Join lobby</button>
+          </div>
+        </form>
+        <p class="back"><a href="index.html">← Home</a></p>
+      </section>
 
-      <p class="back"><a href="index.html">← Back home</a></p>
+      <section id="lobbyPlayer" hidden>
+        <h1 class="page-title">Room <span id="roomLabel" class="mono"></span></h1>
+        <p class="page-hint" id="waitMsg"></p>
+        <p class="back"><a href="index.html">← Leave</a> (close tab to disconnect)</p>
+      </section>
+
+      <section id="gamePlayer" hidden>
+        <p class="q-host-meta" id="playerQuestionMeta"></p>
+        <p class="q-host-text" id="playerQuestionText"></p>
+        <div class="choice-grid" id="choiceButtons"></div>
+        <p class="status" id="resultMsg" hidden></p>
+      </section>
+
+      <section id="endedPlayer" hidden>
+        <h1 class="page-title">Game over</h1>
+        <p class="page-hint">Here is how everyone scored.</p>
+        <div class="scoreboard" id="finalScoresPlayer"></div>
+        <p class="back"><a href="index.html">← Home</a></p>
+      </section>
     </main>
     <footer class="foot">
-      <span>Pikelet demo</span>
+      <span>Pikelet · Quiz mode</span>
     </footer>
 
-    <script src="js/join.js"></script>
+    <script type="module" src="js/join-app.js"></script>
   </body>
 </html>
