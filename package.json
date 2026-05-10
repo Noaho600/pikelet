@@ -1,0 +1,14 @@
+{
+  "name": "pikelet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
