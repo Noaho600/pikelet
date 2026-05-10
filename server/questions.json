@@ -1,0 +1,27 @@
+[
+  {
+    "text": "What is 7 × 8?",
+    "choices": ["54", "56", "63", "49"],
+    "correctIndex": 1
+  },
+  {
+    "text": "Which planet is known as the Red Planet?",
+    "choices": ["Venus", "Jupiter", "Mars", "Saturn"],
+    "correctIndex": 2
+  },
+  {
+    "text": "What is the chemical symbol for water?",
+    "choices": ["O2", "CO2", "H2O", "NaCl"],
+    "correctIndex": 2
+  },
+  {
+    "text": "How many sides does a hexagon have?",
+    "choices": ["5", "6", "7", "8"],
+    "correctIndex": 1
+  },
+  {
+    "text": "What is the largest mammal in the world?",
+    "choices": ["Elephant", "Blue whale", "Giraffe", "Polar bear"],
+    "correctIndex": 1
+  }
+]
