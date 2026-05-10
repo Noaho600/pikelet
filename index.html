@@ -29,7 +29,7 @@
 
     <main class="panel">
       <p class="lede">
-        A simple classroom game hub. Host a room, share a code, everyone plays in the browser.
+        Host runs <span class="mono-inline">npm start</span>, opens the host page, and shares the code. Players join in the browser — live lobby and quiz over WebSockets.
       </p>
 
       <div class="actions">
@@ -37,18 +37,18 @@
         <a class="btn btn-ghost" href="join.html">Join with code</a>
       </div>
 
-      <section class="modes" aria-label="Coming soon">
-        <h2>Modes (coming soon)</h2>
+      <section class="modes" aria-label="Game modes">
+        <h2>Modes</h2>
         <ul>
-          <li>Live quiz race</li>
-          <li>Gold rush (answer fast)</li>
-          <li>Team tower</li>
+          <li><strong>Live quiz</strong> — multiple choice, host reveals, +100 per correct answer</li>
+          <li>Gold rush (coming soon)</li>
+          <li>Team tower (coming soon)</li>
         </ul>
       </section>
     </main>
 
     <footer class="foot">
-      <span>Pikelet is a demo — no accounts yet.</span>
+      <span>No accounts — nicknames only. Questions live in <span class="mono-inline">server/questions.json</span>.</span>
     </footer>
   </body>
 </html>
