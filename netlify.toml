@@ -1,0 +1,6 @@
+# Static UI on Netlify; run the Node + WebSocket server elsewhere (Render, Fly.io, Railway, etc.)
+# Set PIKELET_WS_URL in Netlify → Site configuration → Environment variables
+# Example: wss://pikelet-api.onrender.com/ws
+[build]
+  publish = "."
+  command = "npm run build:netlify"
