@@ -1,0 +1,19 @@
+# Render Blueprint — deploy the Pikelet API (HTTP + WebSocket on /ws)
+# https://render.com/docs/infrastructure-as-code
+#
+# Connect this repo → New → Blueprint, or create a Web Service manually with the same settings.
+# After deploy: set Netlify env PIKELET_WS_URL = wss://<your-service-name>.onrender.com/ws
+
+services:
+  - type: web
+    name: pikelet-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "20"
